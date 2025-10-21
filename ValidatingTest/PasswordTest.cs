@@ -5,11 +5,11 @@ namespace ValidatingTest
     public class PasswordTest
     {
         [Theory]
-        [InlineData("password1")]
-        [InlineData("passw0rd")]
-        [InlineData("1234567a")]
-        [InlineData("parolcarol1234679890228!")]
-        [InlineData("adminka!1703")]
+        [InlineData("passW@rd1")]
+        [InlineData("p!SSw0rd1")]
+        [InlineData("123456aA@")]
+        [InlineData("#Par0lcarol1234679890228!")]
+        [InlineData("Adminka!1703")]
         public void CorrectPassword_ReturnsTrue(string password)
         {
             Assert.True(Password.IsValid(password));
