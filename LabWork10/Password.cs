@@ -2,7 +2,11 @@
 {
     public class Password
     {
-        public static bool IsValid(string password) 
-            => password.Length >= 8 && password.Any(char.IsDigit) && password.Any(char.IsLetter);
+        public static bool IsValid(string password)
+        {
+            if (password is null)
+                throw new ArgumentNullException();
+            return password.Length >= 8 && password.Any(char.IsDigit) && password.Any(char.IsLetter);
+        }
     }
 }
