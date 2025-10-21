@@ -29,7 +29,8 @@ namespace ValidatingTest
         [Fact]
         public void NullPassword_ReturnsThrowsException()
         {
-            Assert.Throws<ArgumentNullException>(()=> Password.IsValid(null));
+            string? password = null;
+            Assert.Throws<ArgumentNullException>(()=> Password.IsValid(password));
         }
     }
 }
