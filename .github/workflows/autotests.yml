@@ -34,5 +34,5 @@ jobs:
       with:
         name: Test results          
         path: "**/*.trx"
-        reporter: dotnet-trxs
+        reporter: dotnet-trx
 
